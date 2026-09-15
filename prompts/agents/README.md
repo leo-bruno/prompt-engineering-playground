@@ -9,3 +9,4 @@ Each reusable agent lives in its own folder:
 ## Agents
 
 - [`frontend-qa-reviewer`](./frontend-qa-reviewer/) — static QA review of a frontend Jira ticket and its GitLab MR; returns a short Jira-ready comment
+- [`frontend-test-strategy-generator`](./frontend-test-strategy-generator/) — concise frontend QA strategy following the testing pyramid; strategy only, no code or test execution
