@@ -11,13 +11,11 @@ prompts/
   qa/         → Prompts for Gherkin, E2E, Jira, API testing
   dev/        → Prompts for coding, refactoring, PR review
   data/       → Prompts for JSON diff, logs, parsing, repairs
+  agents/     → Reusable agent skills (invocation prompt + SKILL.md + examples)
   general/    → System prompts, reasoning patterns, templates
 
 examples/
   results-service/ → Real-world examples using prompts
-
-agent-instructions/
-  jira-agent/      → Instructions for Jira ticket automation
 
 README.md          → Public-facing description
 INTERNAL_README.md → This document
@@ -60,7 +58,7 @@ Nothing in the repo changes during usage.
 
 When you want to add a new prompt:
 
-1. Create a new `.md` file inside the appropriate folder (qa, dev, data, general)
+1. Create a new `.md` file inside the appropriate folder (qa, dev, data, agents, general). For agents, create `prompts/agents/<agent-name>/` instead of a single file.
 2. Use clear naming, e.g.:
    - `generate-mongo-query.md`
    - `refactor-cypress-test.md`
@@ -103,21 +101,17 @@ This keeps templates and real data separated and clean.
 
 ## 🤖 Agent Instructions
 
-If you build AI agents (like your Jira ticket generator):
+Reusable agents live under `prompts/agents/<agent-name>/`.
 
-Store their system instructions inside:
+Each folder should contain:
 
-```
-agent-instructions/<agent-name>/
-```
+- `README.md` → Ready-to-use invocation prompt and how to run it
+- `SKILL.md` → Full skill / system instructions
+- `examples/` → Good, weak, and other behaviour samples
 
-Each folder may contain:
+To use a skill in a product repo, copy the folder (except `README.md` if you prefer) into `.agents/skills/<agent-name>/`.
 
-- `system.md` → The system instructions
-- `examples.md` → Examples of how the agent behaves
-- `notes.md` → Improvements, limitations, future ideas
-
-This ensures you can version, document, and upgrade agents safely.
+Keep the playground copy and the product-repo skill in sync when either side changes.
 
 ---
 

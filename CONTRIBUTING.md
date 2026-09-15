@@ -4,7 +4,8 @@ Thank you for helping improve the prompt engineering playground. These conventio
 
 ## Folder structure
 - All prompts live under `prompt-engineering-playground/prompts`.
-- Use existing subfolders for domain areas: `data`, `dev`, `general`, `qa`, etc. Do not create new top-level folders (e.g., avoid creating `../prompts` outside the repo).
+- Use existing subfolders for domain areas: `data`, `dev`, `general`, `qa`, `agents`, etc. Do not create new top-level folders (e.g., avoid creating `../prompts` outside the repo).
+- Agent skills go under `prompts/agents/<agent-name>/` with `README.md` (invocation prompt), `SKILL.md`, and optional `examples/`.
 - Keep examples and usage demos under `examples/` unless a prompt explicitly requires a colocated sample.
 
 ## Naming conventions

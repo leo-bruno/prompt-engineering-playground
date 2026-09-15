@@ -8,6 +8,7 @@ Repository structure
 -		`prompts/qa/` — Prompts oriented to Quality Assurance, test generation, test strategy, E2E scenarios, exploratory test plans, and test data creation.
 -		`prompts/dev/` — Prompts aimed at developer tasks: refactoring guidance, code-generation snippets, API design, and CI/CD automation.
 -		`prompts/data/` — Prompts for data work: data validation, transformation descriptions, synthetic data generation, and data quality checks.
+-		`prompts/agents/` — Reusable agent skills: invocation prompt, full `SKILL.md`, and examples. Copy a skill folder into a product repo as `.agents/skills/<name>` when needed.
 -		`prompts/general/` — Reusable general-purpose prompts: writing guides, meeting notes, summaries, and templates.
 
 -	`examples/` — Concrete examples where prompts are used to generate outputs and artifacts.
