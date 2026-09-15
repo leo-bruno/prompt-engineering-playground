@@ -1,0 +1,22 @@
+{
+  "issueKey": "CHR-XXXX",
+  "baseUrl": "https://<deployment-host>",
+  "viewport": { "width": 390, "height": 844 },
+  "variables": {
+    "testEmail": "qa-{{runId}}@example.com",
+    "testPassword": "<password>",
+    "otpCode": "<otp-from-kafka-if-needed>"
+  },
+  "beforeAll": [{ "action": "goto", "path": "/<starting-route>" }, { "action": "acceptCookies" }],
+  "scenarios": [
+    {
+      "id": "ac1",
+      "source": "AC1",
+      "name": "<scenario title from approved test plan>",
+      "steps": [
+        { "action": "pause", "ms": 500 },
+        { "action": "screenshot", "file": "ac1-<slug>.png" }
+      ]
+    }
+  ]
+}
